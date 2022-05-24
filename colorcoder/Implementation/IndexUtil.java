@@ -2,10 +2,6 @@ package colorcoder.Implementation;
 
 import java.util.Optional;
 
-interface Index<Integer> {
-    Integer getIndex();
-}
-
 public abstract class IndexUtil {
 
     public static <T extends Enum<T> & Index<S>, S> Optional<T> get(Class<T> type, Integer index) {
