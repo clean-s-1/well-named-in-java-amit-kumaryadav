@@ -15,6 +15,7 @@ public class Processor {
         Optional<MajorColor> majorColor = IndexUtil.get(MajorColor.class, zeroBasedPairNumber / NUMBER_OF_MAJOR_COLORS);
         if (!majorColor.isPresent()) throw new InputMismatchException("Major " + INPUT_CHECK_CONST);
         Optional<MinorColor> minorColor = IndexUtil.get(MinorColor.class, zeroBasedPairNumber % NUMBER_OF_MINOR_COLORS);
+        
         if (!minorColor.isPresent()) throw new InputMismatchException("Minor " + INPUT_CHECK_CONST);
         return new ColorPair(majorColor.get(), minorColor.get());
     }
